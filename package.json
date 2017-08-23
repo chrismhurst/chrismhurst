@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/chrismhurst/chrismhurst.git"
+    "url": "https://github.com/chrismhurst/chrismhurst.git"
   },
   "author": "Chris M. Hurst",
   "license": "ISC",
