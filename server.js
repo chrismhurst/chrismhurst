@@ -1,6 +1,9 @@
 //import express
 const express = require('express')
 
+//require fs
+const fs = require('fs');
+
 //'port' needed for heroku and google app engine
 const port = process.env.PORT || 3000;
 
@@ -15,11 +18,10 @@ app.use((req, res, next) => {
   next();
 });
 
-//tells express that static site content can be found at /public
-app.use(express.static(__dirname + '/public'));
-
-//tells express that secondary static site content can be found at /well-known (for letsencrypt)
-app.use(express.static(__dirname + '/well-known'));
+//manual path for letsencrypt !fix me later!
+app.get('/.well-known/acme-challenge/N_zQ_epFPTJ6X0t_xkmj1ZM3mad9L5UR-1GBV11DlAg', (req, res) => {
+  res.send('N_zQ_epFPTJ6X0t_xkmj1ZM3mad9L5UR-1GBV11DlAg.Oc9qqVSPRacPuT0q-3JMqktI6EmK16zrNWzgmy1JpAo')
+});
 
 //starts node.js app on port
 app.listen(port, () => {
