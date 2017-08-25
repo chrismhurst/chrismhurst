@@ -2,3 +2,5 @@ runtime: nodejs
 env: flex
 manual_scaling:
   instances: 1
+- url: /.well-known
+  static_dir: well-known
