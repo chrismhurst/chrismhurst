@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/chrismhurst/chrismhurst#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "@google-cloud/storage": "^1.2.1",
+    "express": "^4.15.4",
+    "fast-crc32c": "^1.0.4"
   }
 }
