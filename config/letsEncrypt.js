@@ -26,7 +26,7 @@ var returnGcloudFileContents = (path) => {
 router.get(`/:path`, (req, res) => {
   returnGcloudFileContents(req.params.path).then((gcloudFile) => {
     console.log(`Returned letsencrypt key: ${gcloudFile.toString()}`);
-    res.send(gcloudFile);
+    res.send(gcloudFile.toString());
   }).catch((err) => {
     console.log(err);
     res.send(err);
