@@ -13,7 +13,6 @@ const gcsBucket = gcs.bucket('acme-challenges-99uvtcrc58gsg98.chrismhurst.com');
 var returnGcloudFileContents = (path) => {
   return new Promise((resolve, reject) => {
     var file = gcsBucket.file(path);
-    console.log(file);
     file.download().then((fileData) => {
         resolve(fileData[0]);
       }).catch((err) => {
