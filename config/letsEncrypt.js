@@ -21,7 +21,7 @@ var returnGcloudFileContents = (path) => {
   });
 };
 
-//turn path into param, and pass it to the returnGcloudFileContentsAsString function
+//turn path into param, and pass it to the returnGcloudFileContents function
 router.get(`/:path`, (req, res) => {
   returnGcloudFileContents(req.params.path).then((gcloudFile) => {
     console.log(`Returned letsencrypt key: ${gcloudFile.toString()}`);
