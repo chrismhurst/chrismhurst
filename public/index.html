@@ -22,6 +22,18 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<link rel="shortcut icon" href="./files/favicon.png" type="image/png" />
+
+		//stops flash of unstyled content
+		<script>
+    document.documentElement.style.display = "none";
+    // (no-jquery document.ready)
+    (function onReady(f) {
+      document.readyState === "complete"
+        ? f() : setTimeout(onReady, 10, f);
+    }(function() {
+      document.documentElement.style.display = "";
+    }));
+    </script>
 	</head>
 	<body class="loading">
 		<div id="wrapper">
